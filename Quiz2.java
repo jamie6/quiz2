@@ -117,7 +117,7 @@ public class Quiz2
             int numberOfNeighbors = getNumberOfNeighbors(grid);
             if ( numberOfNeighbors < 2 || numberOfNeighbors > 3)
             {  // kill current cell
-                status = 1; // set to dying
+                if ( status == 2 ) status = 1; // set to dying
             }
             else if ( numberOfNeighbors == 3 && status == 0)
             {
